@@ -1,0 +1,63 @@
+.Container {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.formContainer {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    flex-wrap: wrap;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 0px 5px #ccc;
+    border-radius: 5px;
+    width: max-content;
+}
+
+.formContainer form {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.formContainer input {
+    width: 120px;
+    padding: 0 10px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    height: 40px;
+}
+
+.formContainer button {
+    padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  background-color: #2c73d2;
+  color: white;
+  height: 42px;
+}
+
+.gridContainer table {
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 0px 5px #ccc;
+    border-radius: 5px;
+    max-width: 1120px;
+    margin: 20px auto;
+    word-break: break-all;
+}
+
+.gridContainer th {
+    text-align: start;
+    border-bottom: inset;
+    padding-bottom: 5px;
+    width: 1000px;
+}
