@@ -13,32 +13,31 @@ export const getAparelhos = async () => {
     }
 };
 
-export const createAparelho = async (aparelho) => {
+export const createAparelho = async (novoAparelho) => {
     try {
-        const response = await axios.post(API_URL, aparelho); 
-        return response.data; 
+        const response = await axios.post(`${API_URL}/adicionarAparelho`, novoAparelho);  // Corrija a URL
+        return response.data;
     } catch (error) {
         console.error('Erro ao criar aparelho', error);
-        throw error; 
+        throw error;
     }
 };
 
 
-export const updateAparelho = async (id, aparelho) => {
+export const updateAparelho = async (idAparelho, dados) => {
+    console.log(dados);
     try {
-        const response = await axios.put(`${API_URL}//alterarAparelho`, aparelho); 
-        return response.data; 
+        const response = await axios.post(`${API_URL}/alterarAparelho/${idAparelho}`, dados);
+        console.log('Aparelho atualizado com sucesso:', response.data);
     } catch (error) {
-        console.error('Erro ao atualizar aparelho', error);
-        throw error; 
+        console.error('Erro ao atualizar aparelho:', error);
     }
 };
-
 
 export const deleteAparelho = async (id) => {
     try {
-        const response = await axios.delete(`${API_URL}/removerAparelho/${id}`); 
-        return response.data; 
+        const response = await axios.delete(`${API_URL}/removerAparelho/${id}`);
+        return response.data;
     } catch (error) {
         console.error('Erro ao excluir aparelho', error);
         throw error;

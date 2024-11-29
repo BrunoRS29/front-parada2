@@ -21,5 +21,11 @@ export const updateCliente = async (id, cliente) => {
 };
 
 export const deleteCliente = async (id) => {
-    await axios.delete(`${API_URL}/clientes/${id}`);
+    try {
+        const response = await axios.delete(`${API_URL}/removerCliente/${id}`);
+        return response.data;
+    } catch (error) {
+        console.error('Erro ao excluir cliente', error);
+        throw error;
+    }
 };

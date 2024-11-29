@@ -51,15 +51,17 @@ const Cliente = () => {
         }
     };
 
-    const handleDelete = async (id) => {
+    const handleDelete = async (idCliente) => {
         try {
-            await deleteCliente(id);
+            await deleteCliente(idCliente);  // Aqui você passa o idCliente corretamente
             const updatedClientes = await getClientes();
             setClientes(updatedClientes);
         } catch (error) {
             console.error('Erro ao excluir cliente', error);
         }
     };
+    
+
 
     const handleEdit = (cliente) => {
         setEditingCliente(cliente);
