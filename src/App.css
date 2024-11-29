@@ -3,8 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Helvetica;
-    text-shadow: #000 1px 1px;
-    color: #fff;
+    color: #000000;
   }
   
   .App {
@@ -12,5 +11,5 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #2c333d;
+    background-color: #ffffff;
   }
